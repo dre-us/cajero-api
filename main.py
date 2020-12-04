@@ -56,3 +56,7 @@ async def make_transaction(transaction_in: TransactionIn):
     transaction_out = TransactionOut(**transaction_in_db.dict())
 
     return  transaction_out
+
+@api.get("/")
+async def home():
+    return {"message": "Bienvenido a su cajero de confianza"}
